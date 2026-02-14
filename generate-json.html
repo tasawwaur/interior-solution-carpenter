@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Select Your Gallery Folder</h2>
+
+<input type="file" id="folderInput" webkitdirectory multiple>
+<pre id="output"></pre>
+
+<script>
+document.getElementById("folderInput").addEventListener("change", function(e) {
+    const files = Array.from(e.target.files);
+
+    const imageFiles = files
+        .filter(file => /\.(jpg|jpeg|png|webp|gif)$/i.test(file.name))
+        .map(file => `"${file.name}"`);
+
+    const jsonContent = `{
+  "images": [
+    ${imageFiles.join(",\n    ")}
+  ]
+}`;
+
+    document.getElementById("output").textContent = jsonContent;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Interior Solution Carpenter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Interior Solution Carpenter</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="gallery-section">
+    <h2 class="section-title">Our Premium Projects</h2>
+
+    <div id="galleryContainer" class="gallery-grid"></div>
+
+    <div class="pagination">
+        <button onclick="prevPage()" class="page-btn">← Prev</button>
+        <span id="pageNumber" class="page-number"></span>
+        <button onclick="nextPage()" class="page-btn">Next →</button>
+    </div>
+</section>
+
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<a href="https://wa.me/918194030901" class="whatsapp-btn" target="_blank">
+    Chat on WhatsApp
+</a>
+
+<footer>
+    <p>© 2026 Interior Solution Carpenter. All Rights Reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
